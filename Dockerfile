@@ -16,13 +16,13 @@ RUN apt-get update
 # install wget to download files
 RUN apt-get install -y wget
 
-# download maven
-ENV maven_filename apache-maven-3.3.9.tar.gz
-RUN wget --no-verbose -O /tmp/$maven_filename http://apache.mirrors.tds.net/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+# download maven apache-maven-2.2.1-bin.tar.gz
+ENV maven_filename apache-maven-2.2.1-bin.tar.gz
+RUN wget --no-verbose -O /tmp/$maven_filename http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.gz
 
 # install maven
 RUN tar xzf /tmp/$maven_filename -C /opt/
-RUN ln -s /opt/apache-maven-3.3.9 /opt/maven
+RUN ln -s /opt/apache-maven-2.2.1 /opt/maven
 RUN ln -s /opt/maven/bin/mvn /usr/local/bin
 RUN rm -f /tmp/$maven_filename
 ENV MAVEN_HOME /opt/maven
