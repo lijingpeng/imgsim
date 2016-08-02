@@ -64,7 +64,7 @@ ADD tomcat-users.xml $CATALINA_HOME/conf/
 RUN mkdir -p /tmp/build/
 RUN cd /tmp/build/ && git clone https://github.com/lijingpeng/imgsim.git
 # RUN cd /tmp/build/imgsim && mvn -q dependency:resolve
-RUN cd /tmp/build/imgsim && mvn -q -DskipTests=true package \
+RUN cd /tmp/build/imgsim && mvn -DskipTests=true package \
     && rm -rf $CATALINA_HOME/webapps/* \
     && mv imgsim-web/target/*.war $CATALINA_HOME/webapps/ROOT.war \
     && cd / && rm -rf /tmp/build
