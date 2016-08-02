@@ -71,4 +71,4 @@ RUN cd /tmp/build/imgsim && mvn -DskipTests=true package \
 
 EXPOSE 8080
 
-CMD["catalina.sh","run"]
+CMD ["catalina.sh","run"]
