@@ -1,4 +1,5 @@
-# imgsim
+# 简介
+----
 Java Image Similarity Application
 
 这是一个Java写的网络图片Hash、汉明距离计算程序，可用于相似图判断，基于Spring MVC  
@@ -8,7 +9,7 @@ Java Image Similarity Application
 
 容器化部署
 ----
-如果你讨厌搭建各种环境依赖，那么你可以使用docker来部署该应用，执行如下命令：
+如果你讨厌搭建各种环境依赖，那么你可以使用docker来部署该应用，仅需执行两个命令即可：
 > docker build -t docker-imgsim-java .
 
 运行：
@@ -29,5 +30,6 @@ Java Image Similarity Application
   bbafa030781c17218d6b6d3c5ca4cd22fb18e2ae50a1251b8a202eb9083e687d
 ```
 
-如图所示：
+预览
+----
 ![img](img.png)
